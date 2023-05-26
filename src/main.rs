@@ -69,7 +69,7 @@ fn main() {
     let window_height = 900;
     let max_angle = std::f32::consts::PI * 2.0;
     let init_radius = 35.0;
-    let arcs = 32;
+    let arcs = 28;
     let loops = 75.0;
     let full_loop = std::f32::consts::PI * 2.0;
     let velocity = full_loop * loops / 900.0;
@@ -101,19 +101,7 @@ fn main() {
         let mut d = rl.begin_drawing(&thread);
 
         d.clear_background(Color::BLACK);
-        d.draw_line_ex(
-            Vector2::new(
-                100.0, 
-                (window_height - 100) as f32
-            ), 
-            Vector2::new(
-                (window_width - 100) as f32, 
-                (window_height - 100) as f32
-            ),
-            2.0,
-            Color::WHITE
-        );
-        
+
         for i in 0..arcs {
             d.draw_ring(
                 Vector2::new(
